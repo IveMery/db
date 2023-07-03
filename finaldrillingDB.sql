@@ -1,7 +1,6 @@
 --Aquellas usadas para insertar, modificar y eliminar un Customer, Staff y Actor.
-select * from customer;
---insert  customer
 
+--insert  customer
 INSERT INTO customer (customer_id, store_id, first_name, last_name, email, address_id, activebool, create_date, last_update, active)
 VALUES (600, 1, 'Jorge', 'Milla', 'jmillar@gmail.com', 600, true, '2006-02-13', now(), 1);
 
@@ -9,7 +8,6 @@ VALUES (600, 1, 'Jorge', 'Milla', 'jmillar@gmail.com', 600, true, '2006-02-13', 
 UPDATE customer SET first_name= 'Juan',last_name = 'Millar' WHERE customer_id = 600;
 
 --delete customer
-
 DELETE FROM customer WHERE customer_id = 600;
 
 
@@ -23,22 +21,21 @@ UPDATE staff
 SET first_name='Javier', last_name='Peluso'
 WHERE staff_id=3;
 
-select * from staff;
 --delete staff
-
 DELETE FROM staff
 WHERE staff_id= 3;
 
-select * from actor;
+
 --insert actor
 INSERT INTO actor
 (first_name, last_name, last_update)
 VALUES('Brad', 'Pit', now());
---update actor
 
+--update actor
 UPDATE actor
 SET first_name='Brad', last_name='Pitt', last_update=now()
 WHERE actor_id=201;
+
 --delete actor
 DELETE FROM actor
 WHERE actor_id= 201;
